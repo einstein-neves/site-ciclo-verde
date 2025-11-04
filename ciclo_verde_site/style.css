@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fundo */
+body {
+  font-size: large;
+  color: rgb(2, 2, 4);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.88),
+    rgba(240, 240, 240, 0.88)
+  ),
+  url("img/fundo.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Logo */
+.logo img {
+  height: 100%;
+  width: 90px;
+}
+
+/* Barra de navegação */
+header.navbar {
+  background: linear-gradient(180deg, #0a550a,#87b68c);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  color: rgb(14, 13, 13);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transition: color 0.5s ease;
+}
+
+.menu a:hover {
+  color: #eff5ef;
+}
+
+.barra-busca {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 100px solid #3a963d; /* verde igual ao do site */
+  border-radius: 30px;
+  overflow: hidden;
+  width: 329px;  /* tamanho da barra */
+  height: 36px;
+  margin-left: 20px;
+}
+
+.barra-busca input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.barra-busca button {
+  background: linear-gradient(180deg, #0a550a,#87b68c);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.barra-busca button:hover {
+  background: #2b6e30;
+}
+
+
+.area-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* ocupa a maior parte da tela */
+  background: #f9f9f9 url('fundo-cacto.png') no-repeat center bottom;
+  background-size: contain;
+}
+
+/* === CAIXA DE LOGIN === */
+.caixa-login {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.caixa-login h2 {
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* === CAMPOS DO FORMULÁRIO === */
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+
+}
+
+
+
+.container-principal {
+  height: calc(100vh - 100px); /* ocupa a tela toda menos o cabeçalho */
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  background-color: #f4f4f4;
+  background-image: url('fundo-cacto.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}                                                                           
+
+.login-container  {  
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8x 20px rgba(0, 0, 0, 0.15);
+  padding: 78px;
+  width: 100%;
+  max-width: 266px;
+  text-align: center;
+  border-top: 6px solid #2e7d32; /* destaque verde no topo do quadro */
+  
+}
+.login-container h2 {
+ color: #090a09;
+ margin-bottom: 26px; 
+ font-size: 29px;
+
+ 
+
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+ 
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 4px rgba(46, 125, 50, 0.4);
+}
+
+/* BOTÃO DE LOGIN */
+button {
+  background: linear-gradient(to right, #43a047, #2e7d32);
+  color: rgb(26, 19, 19);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px; /* distancia o botao da magin topo */
+}
+
+button:hover {
+  background: linear-gradient(to right, #2e7d32, #43a047);
+}
+
+/* === TEXTO SECUNDÁRIO === */
+.texto-secundario {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.texto-secundario a {
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.texto-secundario a:hover {
+  text-decoration: underline;
+}
+
+/* === RODAPÉ === */
+.rodape {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+  
+/* Dashboard / Produtos */
+.dashboard {
+  padding: 40px;
+  text-align: center;
+  background: #f8f8f8;
+  font-family: Arial, sans-serif;
+
+}
+
+.card-produtos h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.produtos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr); /* 3 produtos por linha */
+  gap: 50px; 
+  justify-items: center; 
+  align-items: start;
+  width: 80%; 
+  max-width: 1000px; 
+  margin: 60px auto; /* centraliza o container */
+
+ 
+}
+
+
+.produto {
+  background: linear-gradient(180deg, #0a550a,#87b68c);
+ border-radius: 58px 58px 16px 16px ;
+ text-align: center;
+ transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 210px;
+  height: 99px;
+  object-fit: cover;
+  border-radius: 58px 58px 16px 16px ;
+  margin-bottom: 10px;
+  box-shadow:  4px 10 px rgba(0, 0, 0, 0.1);
+
+}
+
+.produto h3 {
+  margin-top: 8px;
+  color: #f5f0f0;
+  font-size: 1rem;
+}
+
+.produto p {
+  font-size: 0.9rem;
+  color: #f7f3f3;
+  margin-top: 5px;
+}
+
+.produto button {
+  background-color: #f6f8f6;
+  color: rgb(12, 10, 10);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
+}
+
+.produto button:hover {
+  background-color: #3a963d;
+}
+
+/* Gráfico */
+.carde-grafico {
+  width: 90%;
+  max-width:1149px;
+  background: linear-gradient(180deg, #0a550a,#87b68c);
+  border-radius: 24px;
+  padding: 9px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  margin: 30 auto;
+  text-align: center;
+  flex:1;
+  text-align: center;
+  
+}
+
+.grafico {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 5px;
+  height: 200px;
+  background: #ebe2e2;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-x: auto;
+  
+}
+.barra {
+  width: 50px; /* largura da barra */
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #0a550a, #3a963d);
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  color: rgb(247, 244, 244);
+  font-size: 8px;
+  font-weight: bold;
+  transition: height 1s ease-in-out;
+}
+.barra:hover {
+  transform: scale(1.25);
+}
+
+.b1 { height: 120px; }
+.b2 { height: 120px; }
+.b3 { height: 60px; }
+.b4 { height: 80px; }
+.b5 { height: 90px; }
+.b6 { height: 120px; }
+.b7 { height: 50px; }
+.b8 { height: 20px; }
+.b9 { height: 30px; }
+.b10 { height: 20px; }
+.b11 { height: 50px; }
+.b12 { height: 50px; }
+
+.mapa{
+/* cria um retagulo com, o mapa no meio*/
+  width: 95%;
+  max-width: 600px;
+  height: 250px; /* botou um tamanho entre mapa e rastreio*/
+  background: linear-gradient(180deg, #0a550a, #3a963d);
+  border-radius: 8px;
+  margin-bottom:20px;
+  display: flex; /*centralizando o texto*/
+  justify-content: center; /* se apagar o texto"mapa" volta pro canto*/
+  align-items: center;
+  color: #080606;
+}
+
+.retangulo{ 
+width: 90%;
+max-width: 600px;
+background: linear-gradient(180deg, #0a550a,#87b68c);
+border: 2px solid #101110;
+border-radius: 10px;
+padding: 20px;
+margin: 20px auto;
+display: flex; 
+
+}
+.linha{
+display: flex;
+justify-content: space-between;
+align-items: center;
+  position: relative;
+  width: 90%;
+  height: 4px;
+ 
+  margin-top: 30px
+}
+
+.linha::before {
+
+  content:"" ;
+  position: absolute;
+  top: 50%;
+  left: 0 ;
+  width: 100%;
+  height: 4px;
+  background-color: #121a12;
+  transform: rotateY(-50%);
+  z-index:0;
+}
+.etapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.bolinha{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(180deg, #ecf0ec, #313b31);
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.bolinha:hover {
+   transform: scale(1.25);
+}
+.bolinha:nth-child(1){left: 0;}
+.bolinha:nth-child(2) { left: 33%; }
+.bolinha:nth-child(3) { left: 66%; }
+.bolinha:nth-child(4) { left: 100%; 
+transform: translate(-100%, -50%); }
