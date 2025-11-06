@@ -1,55 +1,60 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>login -Ciclo verde </title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Ciclo Verde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <header class="navbar">
-        <div class="logo">
-        <img src="img/logo.png" alt="Logo do site">
-        
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo do site Ciclo Verde">
+    </div>
+  </header>
+
+  <!-- Seção com imagem e texto -->
+  <section class="imagem-de-fundo">
+    <div class="titulo">
+      <h1>Usamos blockchain e QR Code para promover a transparência e eficiência na logística agrícola</h1>
+      <p>Trabalho do Senac</p>
+    </div>
+  </section>
+
+  <!-- Container principal -->
+  <main class="container-principal">
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <form id="login-form">
+        <label for="email">Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="Entre com seu email"
+        >
+
+        <label for="senha">Senha:</label>
+        <input 
+          type="password" 
+          id="senha" 
+          name="senha" 
+          required 
+          placeholder="Entre com sua senha"
+        >
+
+        <button type="submit">Entrar</button>
+
+        <div class="signup-link">
+          <p>Entre com outra conta: <a href="#">Sign up</a></p>
         </div>
-        
-        
+      </form>
+    </div>
+  </main>
 
-        </div>
-        <nav class="menu">
-        <a href="#">Início</a>
-        <a href="#">Acessibilidade</a>
-        <a href="#">Quem Somos</a>
-        <a href="#">Produtos</a>
-        <a href="#">login</a>
-        </nav>
-    </header>
-
-    <main class="container-principal">
-        <div class="login-container">
-            <h2>Login</h2>
-
-            <form id="loginform">
-                <label class="label" for="email">Email:</label>
-                <input type="email" 
-                
-                id="email" requerid placeholder="Entre com seu email"
-                name=Email id="email" type="email"/>
-
-                <label for="senha">Senha:</label>
-                <input type="senha"
-
-                id= "senha" requerid placeholder="Entre com sua senha"
-                name=senha id="senha" type="email"/>
-
-                <button type="submit">Entrar</button>
-                <div class="signup-link"> Entre com outra login
-                <a href="#">sing up </a>
-
-                </div>
-            </form>
-        </div>
-    </main>
-    </body>
-    </html>
+</body>
+</html>
