@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Ciclo Verde</title>
+  <title>Ciclo Verde - Rastreamento e Pedidos</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </head>
-
 <body>
 
   <header class="navbar">
@@ -14,8 +17,6 @@
       <img src="img/logo.png" alt="Logo do site Ciclo Verde">
     </div>
   </header>
-
-  <!-- Seção com imagem e texto -->
   <section class="imagem-de-fundo">
     <div class="titulo">
       <h1>Usamos blockchain e QR Code para promover a transparência e eficiência na logística agrícola</h1>
@@ -23,7 +24,6 @@
     </div>
   </section>
 
-  <!-- Container principal -->
   <main class="container-principal">
     <div class="login-container">
       <h2>Login</h2>
@@ -47,14 +47,17 @@
           placeholder="Entre com sua senha"
         >
 
-        <button type="submit">Entrar</button>
+        <button type="submit" class="botao-login">Entrar</button>
 
-        <div class="signup-link">
-          <p>Entre com outra conta: <a href="#">Sign up</a></p>
-        </div>
+  <div class="signup-link">
+    <p>Entre com outra conta: <a href="cadastro.html">Sign up</a></p>
+  </div>
+
       </form>
     </div>
   </main>
 
+
+  <script src="script.js"></script>
 </body>
 </html>

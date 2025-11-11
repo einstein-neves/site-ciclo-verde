@@ -1,39 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quemsomos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciclo Verde - Rastreamento e Pedidos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </head>
-<body>
-    <header class="navbar">
+
+  <body>
+  <header class="navbar">
     <div class="logo">
-      <img src="img/logo.png" alt="Logo do site">
+      <img src="img/logo.png" alt="Logo Ciclo Verde">
     </div>
+
     <div class="titulo">
-      <h1>Bem-vindo ao ciclo Verde</h1>
-      <p>Trabalho do Senac</p>
+      <h1>Ciclo Verde</h1>
+      <p>Gestão Sustentável de Sementes 🌱</p>
     </div>
+
     <nav class="menu">
-      <a href="#">Início</a>
-      <a href="#">Acessibilidade</a>
-      <a href="#">Quem Somos</a>
-      <a href="#">Produtos</a>
-       <a href="#">login</a>
+      <a href="index.html">Início</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+      <a href="quemsomos.html">Quem Somos</a>
+      <a href="produto.html">Produtos</a>
+      <a href="proposta.html">Propostas</a>
+      <a href="login.html">Login</a>
     </nav>
   </header>
+
+  <main>
+    <section class="barra-buscar">
+      <input type="text" placeholder="Buscar sementes...">
+      <button  type="submit" class="botao-buscar">🔍</button>
+    </section>
+  </main>
+
+<section class="Quem-somos" >
+  <div class="somos" >
+  <h2> Quem Somos </h2>
+  <h3> <strong> programa: </strong></h3>
+
+  <p>O Ciclo Verde é um programa que facilita o contato entre produtores e 
+    fornecedores de sementes, tornando o processo de pedido, rastreamento e
+    entrega muito mais rápido e organizado.
+    Por meio de QR codes, cada lote pode ser acompanhado desde o momento em que sai do fornecedor até a 
+    chegada ao produtor. Assim, todos sabem exatamente onde está a carga, o que ela 
+    contém e qual o destino final, sem confusões ou atrasos.
+    A ideia é simples: o produtor faz o pedido pelo aplicativo, 
+    o fornecedor prepara o envio e o sistema gera um QR code que 
+    acompanha as sementes durante todo o transporte. Com isso, o 
+    Ciclo Verde garante mais controle, segurança e praticidade para ambos os lados.
+    Nosso objetivo é unir tecnologia e sustentabilidade, ajudando quem 
+    trabalha com a terra a ter um processo mais organizado, transparente e  conectado — do plantio até a colheita.
+    Missão Tornar o processo de compra, envio e rastreamento de sementes fácil, rápido e confiável, conectando produtores e 
+    fornecedores em uma mesma plataforma. 
+  </p>
     
-<main>
+  </div>
 
-  <div class=" barra-buscar" >
-        <input type="text" placeholder="Buscar sementes" >
-        <button> 🔍 </button>
-      </div>
+    <div class="galeria">
+    <img src="img/agricultor.jfif" alt="">
+    <img src="img/agri01.jpg" alt="">
+    <img src="img/agri02.jfif" alt="">
 
-</main>
+  </div>
 
+</section>
 
+<footer>
+<p>🌿Ciclo Verde © 2025 - Todos os direitos reservados.</p>
+</footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

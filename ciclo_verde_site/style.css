@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Fundo */
 body {
   font-size: large;
@@ -18,13 +17,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 /* Logo */
 .logo img {
   height: 100%;
   width: 90px;
 }
-
 /* Barra de navegação */
 header.navbar {
   background: linear-gradient(180deg, #0a550a,#87b68c);
@@ -34,12 +31,10 @@ header.navbar {
   flex-wrap: wrap;
   padding: 10px 40px;
 }
-
 .menu {
   display: flex;
   gap: 40px;
 }
-
 .menu a {
   color: rgb(14, 13, 13);
   text-decoration: none;
@@ -48,27 +43,21 @@ header.navbar {
   letter-spacing: 1px;
   transition: color 0.5s ease;
 }
-
 .menu a:hover {
   color: #eff5ef;
 }
-
-
 /* barra de biscar semenetes */
 .barra-buscar {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-  background: white;
-  border: 2px solid #3a963d;
-  border-radius: 30px;
-  overflow: hidden;
-  width: 400px;
-  height: 42px;
-  padding: 10 10px;
-  vertical-align: middle; /* mantém alinhado com o botão */
+    margin-top: 31px;
+    display:inline-flex;
+    align-items: center;
+    background: rgb(248, 247, 247);
+    border: 2.1px solid #030703;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 443px;
+    height: 47px;  
 }
-
 .barra-buscar input {
   flex: 1;
   border: none;
@@ -77,28 +66,22 @@ header.navbar {
   color: #333;
   height: 100%;
 }
-
 .barra-buscar input::placeholder {
-  color: #555;
+  color: #a09999;
   text-align: center;
 }
-
-/* Botão fora da caixa */
 .botao-buscar {
-  background: linear-gradient(180deg, #0a550a, #87b68c);
-  border: none;
-  color: white;
-  font-size: 18px;
-  padding: 8px 14px;
-  border-radius: 50%;
-  margin-left: 8px;
+  background: linear-gradient(to right, #43a047, #2e7d32);
+  border-radius: 90px;
+  padding: 9px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  vertical-align: middle;
+  transition:0.3s,;
+  width: 22%;
+  margin-top: -1px;
+  display: block;
 }
-
-
-
 .botao-busca:hover {
   background: #2b6e30;
   transform: scale(1.05);
@@ -116,13 +99,12 @@ header.navbar {
   border-radius:  6px 6px 6px 6px;
   
 }
-
 .imagem-de-fundo .titulo{
     position: relative;
     top: 82%;
     left: 51%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(196, 188, 188);
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.3); */
     /* padding: 485px 4px; */
@@ -130,6 +112,7 @@ header.navbar {
     max-width: 80%;
   
 }
+/* caixa login inicicio  */
 .area-login {
   display: flex;
   justify-content: center;
@@ -138,8 +121,6 @@ header.navbar {
   background: #f9f9f9 url('fundo-cacto.png') no-repeat center bottom;
   background-size: contain;
 }
-
-/*  CAIXA DE LOGIN  */
 .caixa-login {
   background-color: #ffffff;
   border-radius: 12px;
@@ -154,29 +135,26 @@ header.navbar {
   margin-bottom: 25px;
   font-size: 26px;
 }
-/* === CAMPOS DO FORMULÁRIO === */
 .loginform {
   display: flex;
   flex-direction: column;
 }
-/* login*/
 .container-principal {
   position: absolute;
-  top: 9%;
+  top: 4%;
   left: 13%;
-  margin-top: 14%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
+  background-color: #c9c6c6;
   background-image: url('fundo-cacto.png');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
   border: 2px solid #080606;
+  
 }     
-
-
 .login-container  {  
  background: linear-gradient(403deg, #f9faf9,#eff7efdc);
   border-radius: 15px;
@@ -186,6 +164,7 @@ header.navbar {
   text-align: center;
   border-top: 19px solid #27662a ; /* destaque verde no topo do quadro */
   border-image:linear-gradient(to right, #43a047, #2e7d32) 1;
+  
 }
 .login-container h2 {
  color: #090a09;
@@ -199,7 +178,6 @@ label {
   text-align: left;
   margin-bottom: 6px;
 }
-
 input { /* configuração de email e senha*/
    width: 100%;
   padding: 10px;
@@ -214,27 +192,24 @@ input:focus {
   border-color: #2e7d32;
   box-shadow: 0 0 4px rgba(46, 125, 50, 0.4);
 }
-
-
-
-
 /* BOTÃO DE LOGIN */
-button {
+.botao-login {
   background: linear-gradient(to right, #43a047, #2e7d32);
   color: rgb(26, 19, 19);
   border: none;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 10px;
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 1px; /* distancia o botao da magin topo */
+  transition:0.3s,;
+  width: 100%;
+  margin-top: 10px;
 }
 button:hover {
   background: linear-gradient(to right, #2e7d32, #43a047);
+  transform: scale(1.06);
 }
-/* === TEXTO SECUNDÁRIO === */
 .texto-secundario {
   margin-top: 10px;
   font-size: 13px;
@@ -248,22 +223,16 @@ button:hover {
   text-decoration: underline;
 }
 /* login imagem , quadro login fim */
-
-
-
-
-
-  
-/* Dashboard / Produtos  inicio*/
+/* Dashboard / Produtos.html  inicio*/
 .dashboard {
   padding: 40px;
   text-align: center;
-  background: #f8f8f8;
+  background: linear-gradient(to right, #8d8f8d, #fafcfa, #8d8f8d, );
   font-family: Arial, sans-serif;
 }
 .card-produtos h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #333; 
 }
 .produtos-container {
   display: grid;
@@ -276,23 +245,17 @@ button:hover {
   margin: 57px auto; /* centraliza o container */
 }
 .produto {
-background: linear-gradient(180deg, #0a550a,#87b68c);
+background: linear-gradient(180deg, #0a550a,#528557);
 border-radius: 58px 58px 16px 16px ;
 text-align: center;
 transition: transform 0.3s ease,box-shadow 0.3s ease;
-
 box-sizing: border-box;
 overflow: hidden;
-
+box-shadow: #385238 0 4px 15px;
 }
-
 .produto h3,
 .produto p {
   margin: 10px 15px 0 15px; 
-}
-
-.produto button {
-  margin: 10px 0 0;
 }
 .produto:hover {
   transform: scale(1.05);
@@ -316,25 +279,22 @@ overflow: hidden;
   margin-top: 3px;
   text-justify: inter-word;
   text-align: justify;
-
 }
 .produto button {
-  background-color: #f6f8f6;
+  width: 100%;
+  background-color: #087c08;
   color: rgb(12, 10, 10);
   border: none;
   padding: 8px 12px;
   border-radius: 10px 10px 0px 0px;
   cursor: pointer;
+  display: block;
 }
 .produto button:hover {
-  background-color: #3a963d;
+ background: linear-gradient(180deg, #087c08, #6ab174);
+  transform: scale(1.09);
 }
 /* Dashboard / Produtos  fim*/
-
-
-
-
-
 /* Gráfico de pedidos inicio */
 .card-grafico {
   width: 90%;
@@ -344,132 +304,333 @@ overflow: hidden;
   padding: 20px;
   margin: 30px auto;
   box-shadow: 0 5px 8px rgba(14, 13, 13, 0.1);
-  text-align: center;
-  
+  text-align: center; 
 }
-
-.grafico {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  gap: 5px;
-  height: 200px;
-  background: #f8f7f7;
-  border-radius: 10px;
-  padding: 15px;
-  overflow-x: auto;
-  
-}
-.barra {
-  width: 50px; /* largura da barra */
-  flex-shrink: 0;
-  background: linear-gradient(180deg, #0a550a, #3a963d);
-  border-radius: 5px 5px 0 0;
-  text-align: center;
-  color: rgb(247, 244, 244);
-  font-size: 10px;
-  font-weight: bold;
-  transition: height 1s ease-in-out;
-}
-.barra:hover {
-  transform: scale(1.25);
-}
-
-.b1 { height: 120px; }
-.b2 { height: 120px; }
-.b3 { height: 60px; }
-.b4 { height: 80px; }
-.b5 { height: 90px; }
-.b6 { height: 120px; }
-.b7 { height: 50px; }
-.b8 { height: 20px; }
-.b9 { height: 30px; }
-.b10 { height: 20px; }
-.b11 { height: 50px; }
-.b12 { height: 50px; }
-
-
 /* Gráfico de pedidos fim */
-
-
 /* mapa para o grafico inicio*/
-.mapa{
-/* cria um retagulo com, o mapa no meio*/
-  width: 95%;
-  max-width: 600px;
-  height: 250px; /* botou um tamanho entre mapa e rastreio*/
-  background: linear-gradient(180deg, #0a550a, #3a963d);
-  border-radius: 8px;
-  margin-bottom:20px auto;
-  display: flex; /*centralizando o texto*/
-  justify-content: center; /* se apagar o texto"mapa" volta pro canto*/
-  align-items: center;
-  color: #080606;
-}
-
-/* mapa para o grafico fim */
-
-
-
-
-/* rastreio status de pedidos grafico em barra   inicio fim */
-.retangulo{ 
-width: 90%;
-  max-width: 600px;
-  background: linear-gradient(180deg, #0a550a, #87b68c);
-  border: 2px solid #101110;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-.linha{
-display: flex;
-justify-content: space-between;
-align-items: center;
-  position: relative;
+.mapa-container {
   width: 90%;
-  height: 4px;
- 
-  margin-top: 30px
+  margin: 30px auto;
+  text-align: center;
 }
-
-.linha::before {
-
-  content:"" ;
-  position: absolute;
-  top: 50%;
-  left: 0 ;
-  width: 100%;
-  height: 4px;
-  background-color: #121a12;
-  transform: rotateY(-50%);
-  z-index:0;
+#map {
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 2px solid #2e8b57;
+}
+/* mapa para o grafico fim */
+/* rastreio status de pedidos grafico em barra horinzontal com bolinhas    inicio*/
+.rastreio {
+  text-align: center;
+  margin: 30px auto;
+  width: 80%;
+}
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
 }
 .etapa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
+  text-align: center;
+  flex: 1;
+  position: relative;
 }
-.bolinha{
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(180deg, #ecf0ec, #313b31);
+.etapa::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -50%;
+  width: 100%;
+  height: 4px;
+  background-color: #ccc;
+  z-index: -1;
+}
+.etapa:last-child::after {
+  display: none;
+}
+.bolinha {
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
   border-radius: 50%;
-  margin-bottom: 8px;
-  transition: transform 0.3s ease;
+  margin: 0 auto;
+  transition: 0.6s;
+  box-shadow: 0 0 0px #2e8b57;
 }
-.bolinha:hover {
-   transform: scale(1.25);
+.etapa.ativo .bolinha {
+  background-color: #2e8b57;
+  box-shadow: 0 0 15px #2e8b57;
 }
-.bolinha:nth-child(1){left: 0;}
-.bolinha:nth-child(2) { left: 33%; }
-.bolinha:nth-child(3) { left: 66%; }
-.bolinha:nth-child(4) { left: 100%; 
-transform: translate(-100%, -50%); }
-
+.etapa span {
+  display: block;
+  margin-top: 8px;
+}
+/* rastreio status de pedidos grafico em barra horinzontal com bolinhas fim */
+/* Gráfico */
+.grafico-container {
+  width: 60%;
+  margin: 40px auto;
+  text-align: center;
+}
+canvas {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/* Informações */
+.info {
+  background-color: #e9f5ec;
+  padding: 30px;
+  text-align: center;
+}
+.info ul {
+  list-style: none;
+  margin-top: 10px;
+}
+.info li {
+  margin: 8px 0;
+  font-size: 1.1em;
+}
 /* status de pedidos grafico em barra  fim */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0a550a;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+/* contato html */
+.container-contato {
+  max-width: 549px;
+  margin: 140px auto;
+  background: #f5f5f5;
+  padding: 60px;
+  border-radius: 15px;
+}
+.form-contato label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.form-contato input, .form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #3a963d;
+  margin-top: 5px;
+}
+.form-contato button {
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(180deg, #0a550a, #87b68c);
+  color: rgb(8, 8, 8);
+  border: 1.5px solid;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.5s; 
+}
+.form-contato button:hover {
+  background: linear-gradient(180deg, #087c08, #5fa86a);
+  transform: scale(1.06);
+}
+/* formulario de proposta*/
+/* Container principal */
+.container-propostas {
+  max-width: 550px;
+  margin: 120px auto;
+  background: #f0eded;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 14px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  border:2px solid;
+}
+/* Título */
+.container-propostas h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #010701;
+  
+}
+/* Labels estado quantidade  tipo semente */
+.form-proposta label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0a0909;
+}
+/* Inputs e Select */
+.form-proposta input,
+.form-proposta select,
+.form-proposta textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #2b812e;
+  margin-top: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.5s;
+}
+.form-proposta input:focus,
+.form-proposta select:focus {
+  border-color: #040704;
+}
+/* Botão de enviar */
+.botao-proposta {
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(180deg, #0a550a, #87b68c);
+  color: rgb(8, 8, 8);
+  border: 1.5px solid;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.5s;
+}
+.botao-proposta:hover {
+  background: linear-gradient(180deg, #087c08, #5fa86a);
+  transform: scale(1.06);
+}
+.aba-solicitacao { 
+height: 10px;
+color: #087c08;
+}
+.secao-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 80px auto;
+  flex-wrap: wrap; /* fica empilhado no celular */
+}
+.container-pro,
+.container-sol {
+  width: 40%;
+  min-width: 340px;
+  background: linear-gradient(180deg, #087c08, #5fa86a);
+  border-radius:  0 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  padding-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container-pro:hover,
+.container-sol:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.container-pro h2,
+.container-sol h2 {
+  background-color: #b8d4bf;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 0 30px;
+  text-align: center;
+}
+.container-pro p,
+.container-sol p {
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  padding: 10px 20px;
+  color: #fff;
+}
+.botao-pr,
+.botao-sol {
+  text-align: center;
+  margin-top: 30px;
+  
+}
+.botao-pr, 
+.botao-sol{
+  position: relative;
+  left: 60%; /* posicione o botsao a esquerda*/
+  display: inline-block;
+  background: linear-gradient(180deg, #0a550a, #87b68c);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s, background 0.4s;
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid #0a550a;
+}
+.botao-pr:hover,
+.botao-sol:hover {
+  background: linear-gradient(180deg, #087c08, #5fa86a);
+  transform: scale(1.08);
+}
+.Quem-somos{
+  background: linear-gradient(180deg, #1b8a3b, #3fa55b);
+  color: #f7f4f4;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.Quem-somos h2 {
+ text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.somos h3 {
+  color: #d0ffcf;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+ }
+.somos p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 30px;
+
+}
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.galeria img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3 ease, box-shadown 0.3 ease;
+
+}
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}

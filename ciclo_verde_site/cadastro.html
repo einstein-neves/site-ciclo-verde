@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclo Verde - Rastreamento e Pedidos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo do site Ciclo Verde">
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" role="button" tabindex="0">☰</div>
+  </header>
+
+  <section class="imagem-de-fundo">
+    <div class="titulo">
+      <h1>Cadastre-se para participar da distribuição de sementes e fortalecer a agricultura familiar</h1>
+      <p>Trabalho do Senac</p>
+    </div>
+  </section>
+
+  <main class="container-principal">
+    <div class="login-container">
+      <h2>Cadastro</h2>
+      <form id="cadastro-form" novalidate>
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF (apenas números)">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu email">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required placeholder="(DDD) 90000-0000">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required placeholder="Digite sua cidade">
+        <button type="submit" class="botao-login">Cadastrar</button>
+      </form>
+
+      <div id="mensagem" aria-live="polite" style="margin-top:12px;"></div>
+    </div>
+  </main>
+
+  <script>
+  
+    function toggleMenu() {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      nav.classList.toggle('open');
+    }
+    function validarCPFSimples(cpf) {
+      const apenasNumeros = cpf.replace(/\D/g, '');
+      return apenasNumeros.length === 11;
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('cadastro-form');
+      const mensagem = document.getElementById('mensagem');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); 
+        const nome = document.getElementById('nome').value.trim();
+        const cpf = document.getElementById('cpf').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const cidade = document.getElementById('cidade').value.trim();
+
+        
+        if (!nome || !cpf || !email || !telefone || !cidade) {
+          mensagem.textContent = 'Por favor, preencha todos os campos.';
+          mensagem.style.color = 'crimson';
+          return;
+        }
+
+        if (!validarCPFSimples(cpf)) {
+          mensagem.textContent = 'CPF inválido. Insira 11 dígitos numéricos.';
+          mensagem.style.color = 'crimson';
+          return;
+        }
+
+        
+        mensagem.textContent = 'Cadastro realizado com sucesso!✅ Obrigado.';
+        mensagem.style.color = 'green';
+
+      
+        form.reset();
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

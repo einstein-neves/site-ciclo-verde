@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    
-  <header class="navbar">
+ <header class="navbar">
     <div class="logo">
       <img src="img/logo.png" alt="Logo Ciclo Verde">
     </div>
@@ -38,13 +37,43 @@
       <input type="text" placeholder="Buscar sementes...">
       <button  type="submit" class="botao-buscar">🔍</button>
     </section>
-  </main>
+ 
+<main class="container-propostas">
+  <h1>Envio de Propostas de Sementes</h1>
+  <form id="formProposta" class="form-proposta">
+
+    <label>Tipo de Semente:</label>
+    <input type="text" required>
+
+    <label>Quantidade (kg):</label>
+    <input type="number" required>
+
+    <label>Estado:</label>
+    <select required>
+      <option value="">Selecione</option>
+      <option>RN</option>
+      <option>PB</option>
+      <option>BA</option>
+      <option>PE</option>
+    </select>
+    <button type="submit" class="botao-proposta">Enviar Proposta</button>
+  </form>
+
+  <p id="mensagem"></p>
+
+</main>
+
+<script>
+document.getElementById("formProposta").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("mensagem").textContent = "✅ Proposta enviada com sucesso!";
+});
+</script>
 
 <footer>
     <p>🌿Ciclo Verde © 2025 - Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>

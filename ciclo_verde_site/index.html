@@ -3,109 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - Ciclo Verde</title>
+  <title>Ciclo Verde - Rastreamento e Pedidos</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </head>
 
 <body>
-
-  <header class="navbar">
+ <header class="navbar">
     <div class="logo">
-      <img src="img/logo.png" alt="Logo do site Ciclo Verde">
+      <img src="img/logo.png" alt="Logo Ciclo Verde">
     </div>
 
     <div class="titulo">
-      <h1>Bem-vindo ao Ciclo Verde</h1>
-      <p>Trabalho do Senac</p>
+      <h1>Ciclo Verde</h1>
+      <p>Gestão Sustentável de Sementes 🌱</p>
     </div>
 
     <nav class="menu">
-      <a href="#">Início</a>
-      <a href="#">Acessibilidade</a>
-      <a href="#">Quem Somos</a>
-      <a href="#">Produtos</a>
-      <a href="#">Login</a>
+      <a href="index.html">Início</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+      <a href="quemsomos.html">Quem Somos</a>
+      <a href="produto.html">Produtos</a>
+      <a href="proposta.html">Propostas</a>
+      <a href="login.html">Login</a>
     </nav>
   </header>
 
   <main>
+    <section class="barra-buscar">
+      <input type="text" placeholder="Buscar sementes...">
+      <button  type="submit" class="botao-buscar">🔍</button>
+    </section>
 
-    <!-- Barra de busca -->
-    <div class="barra-buscar">
-      <input type="text" placeholder="Buscar sementes">
-      <button>🔍</button>
+<section class="secao-cards">
+<div class="container-pro">
+  <h2> Bem vindos à Cicclo-verde</h2>
+
+  <p> Descubra a variedade de sementes sustentáveis que promovem o cultivo responsável
+    e fortalecem a agricultura familiar.
+
+    Conheça nossas sementes selecionadas, ideais para quem busca qualidade,
+    produtividade e respeito ao meio ambiente.
+
+    promovendo o cultivo sustentavel atraveis da  
+    distribuição de sementes fortalecendo  
+    as Familias e o meio ambiente. 
+  
+    Escolha entre diversas sementes crioulas e sustentáveis, 
+    cultivadas com respeito à natureza.</p>
+
+    <div class="botao-pro">
+    <a href="produto.html" class="botao-pr">Ver produtos</a>
     </div>
+</div>
 
-    <!-- Mapa e Rastreamento -->
+<div class="container-sol">
+
+  <div class ="titulo-sol">
+  <h2> Promovemos </h2>
+  <p> cultivo sustentavel atraveis da  
+    distribuição de sementes fortalecendo  
+    as Familias e o meio ambiente. 
+
+    Preencha o formulário e envie sua 
+    solicitação de sementes ou oferta de 
+    contribuição para o  projeto Ciclo Verde.
+
+    Quer receber ou oferecer sementes? 
+    Clique abaixo e participe da troca verde que 
+    fortalece o futuro da agricultura.
+
+  </p> 
+  <div class="Botao-sol">
+    <a href="proposta.html" class="botao-sol">Fazer propostas </a> 
+  </div>
+ 
+</section> 
+
     <section class="rastreio">
-      <div class="mapa">Mapa / Brasil</div>
-      
-      <div class="retangulo">
-        <h3>Rastreio de Pedidos</h3>
-
-        <div class="linha">
-          <div class="etapa">
-            <div class="bolinha"></div>
-            <span class="legenda">Origem</span>
-          </div>
-
-          <div class="etapa">
-            <div class="bolinha"></div>
-            <span class="legenda">Saiu para entrega</span>
-          </div>
-
-          <div class="etapa">
-            <div class="bolinha"></div>
-            <span class="legenda">Em Trânsito</span>
-          </div>
-
-          <div class="etapa">
-            <div class="bolinha"></div>
-            <span class="legenda">Entregue</span>
-          </div>
-        </div>
+      <h2>Rastreamento de Pedidos</h2>
+      <div class="linha">
+        <div class="etapa ativo"><div class="bolinha"></div><span>Origem</span></div>
+        <div class="etapa"><div class="bolinha"></div><span>Em Trânsito</span></div>
+        <div class="etapa"><div class="bolinha"></div><span>Saindo para Entrega</span></div>
+        <div class="etapa"><div class="bolinha"></div><span>Entregue</span></div>
       </div>
     </section>
 
-    <!-- Gráfico -->
-    <section class="card-grafico"> 
-      <h2>Distribuição por Mês</h2>
-
-      <div class="grafico">
-        <div class="barra b1">Janeiro</div>
-        <div class="barra b2">Fevereiro</div>
-        <div class="barra b3">Março</div>
-        <div class="barra b4">Abril</div>
-        <div class="barra b5">Maio</div>
-        <div class="barra b6">Junho</div>
-        <div class="barra b7">Julho</div>
-        <div class="barra b8">Agosto</div>
-        <div class="barra b9">Setembro</div>
-        <div class="barra b10">Outubro</div>
-        <div class="barra b11">Novembro</div>
-        <div class="barra b12">Dezembro</div>
-      </div>
+    <section class="mapa-container">
+      <h2>Rastreamento em Tempo Real</h2>
+      <div id="map"></div>
     </section>
 
-    <!-- Informações -->
+    <section class="grafico-container">
+      <h2>Saída de Pedidos por Mês</h2>
+      <canvas id="graficoPedidos"></canvas>
+    </section>
+
     <section class="info">
-      <h1 class="titulo-principal">Plataforma Digital de Gestão de Sementes</h1>
-
-      <div class="info-box">
-        <h2>Funcionalidades</h2>
-        <ul> 
-          <li>Gestão</li>
-          <li>Blockchain</li>
-          <li>QR-Code</li>
-        </ul>
-      </div>
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li>Gestão Inteligente de Sementes</li>
+        <li>Blockchain e QR Code</li>
+        <li>Monitoramento em Tempo Real</li>
+        <li>Análise Gráfica de Pedidos</li>
+      </ul>
     </section>
-
   </main>
 
   <footer>
-    <p>E.N 2025 - Todos os direitos reservados.</p>
+    <p>🌿Ciclo Verde © 2025 - Todos os direitos reservados.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
